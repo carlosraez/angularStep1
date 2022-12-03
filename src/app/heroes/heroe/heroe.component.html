@@ -1,1 +1,22 @@
-<h1>Here Component Works</h1>
+<h1>{{ nombre }}</h1>
+<dl>
+    <td>Nombre</td>
+    <h1>{{ nombre }}</h1>
+
+    <td>Edad</td>
+    <h1>{{ edad }}</h1>
+
+    <td>Función</td>
+    <h1>{{ getName() }}</h1>
+    
+    <td>Capitalizado</td>
+    <h1>{{ nameToUperCase }}</h1>
+</dl>
+
+<button (click)="changeName()">
+    Cambiar Hérore
+</button>
+
+<button (click)="changeAge()">
+    Cambiar Edad
+</button>
