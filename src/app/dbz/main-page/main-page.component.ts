@@ -1,34 +1,29 @@
 import { Component } from '@angular/core';
-
-interface Personaje {
-  name:string;
-  power:number;
-}
-
+import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
+
+  //  personajes: Personaje[] = []
    
-   personajes: Personaje[] = [
-    {name: 'Goku', power: 1500},
-    {name: 'Vegeta', power: 200}
-  ]
    new:Personaje = {
-     name: '',
-     power: 0,
+     name: 'Trunks 3',
+     power: 100,
    }
 
-   add() {
-    if (this.new.name.trim().length === 0) {
-      return
-    }
-    this.personajes.push(this.new)
-    this.new = {
-      name: '',
-      power: 0,
-    }
-   }
+  //  get personajes():Personaje[] {
+  //     return this.dbzService.personajes
+  //  }
+
+   //recibo la prop del compoennte Hijo con el evento 
+  //  addNewPersonaje(argument:Personaje) { 
+  //   this.personajes.push(argument)
+  //  }
+
+
+
 }
